@@ -6,20 +6,27 @@ const Menu = ({ menu }) => {
     <div
       style={{
         border: "1px solid #ccc",
-        margin: "10px",
-        padding: "10px",
-        flex: "1 0 21%", // Allows 4 items per row
-        maxWidth: "21%",
-        boxSizing: "border-box",
+        padding: "20px",
+        backgroundColor: "#fff",
+        borderRadius: "8px",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        textAlign: "center",
       }}
     >
-      <h2>{menu.strCategory}</h2>
+      <h2 style={{ color: "#ff8c00" }}>{menu.strCategory}</h2>
       <img
         src={menu.strCategoryThumb}
         alt={menu.strCategory}
-        style={{ width: "100px", height: "100px" }}
+        style={{
+          width: "100%",
+          height: "200px",
+          objectFit: "cover",
+          borderRadius: "8px",
+        }}
       />
-      <p>{menu.strCategoryDescription}</p>
+      <p style={{ marginTop: "10px", color: "#555" }}>
+        {menu.strCategoryDescription}
+      </p>
     </div>
   );
 };
